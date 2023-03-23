@@ -15,11 +15,9 @@ public interface JuegoService {
 		public Optional<Juego>findById(int id);
 		
 		// MODIFICAR
-		public void saveJuego(Juego juego);
+		public void save(Juego juego);
 				
-		// AÑADIR
-		public void addJuego(Juego juego);
-				
+			
 		// BORRAR
 		public void deleteJuego(int id);
 		
