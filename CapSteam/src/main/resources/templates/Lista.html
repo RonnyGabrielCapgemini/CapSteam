@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}" />
     <link rel="stylesheet" th:href="@{/listStyle.css}"/>
 
 </head>
@@ -16,10 +17,10 @@
     </h2>
 
     <p>
-        <a href="/new" class="btnAddJuego">Añadir nuevo registro de Juego</a>
+        <a href="/new" class="btn btn-primary">Añadir nuevo registro de Juego</a>
     </p>
 
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>Ranking</th>
             <th>Nombre</th>

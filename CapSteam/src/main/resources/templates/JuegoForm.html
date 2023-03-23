@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CAP STEAM PROYECT </title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}" />
     <link rel="stylesheet" th:href="@{/listStyle.css}"/>
 </head>
 <body>
@@ -14,7 +15,7 @@
     <h2>
         Crear nuevo registro de juego
     </h2>
-    <div>
+    <div align="center">
 
         <form method="post" th:object="${juego}" th:action="@{/save}">
             <input id="id" th:field="*{id}" type="hidden"/>
