@@ -19,6 +19,12 @@ public interface JuegoDAO extends JpaRepository<Juego, Integer>  {
 	
 	// RECUPERAR EL JUEGO POR SU ID
 	public Optional<Juego>findById(int id);
+	
+	// AÑADIR JUEGO
+	public void addJuego(String name);
+	
+	// ELIMINAR
+	public void deleteJuego(int id);
 		
 	
 

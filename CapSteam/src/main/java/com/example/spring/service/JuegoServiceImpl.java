@@ -27,6 +27,23 @@ public class JuegoServiceImpl implements JuegoService {
 		return juegoDao.findById(id);
 	}
 	
+	@Override
+	public void saveJuego(Juego juego) {
+		juegoDao.save(juego);
+	}
+	
+	@Override
+	public void deleteJuego(int id) {
+		juegoDao.deleteById(id);
+	}
+
+
+	@Override
+	public void addJuego(String name) {
+		juegoDao.addJuego(name);
+		
+	}
+	
 	
 	
 }
