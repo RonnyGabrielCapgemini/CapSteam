@@ -28,7 +28,7 @@ public class JuegoServiceImpl implements JuegoService {
 	}
 	
 	@Override
-	public void saveJuego(Juego juego) {
+	public void save(Juego juego) {
 		juegoDao.save(juego);
 	}
 	
@@ -38,11 +38,6 @@ public class JuegoServiceImpl implements JuegoService {
 	}
 
 
-	@Override
-	public void addJuego(Juego juego) {
-		juegoDao.addJuego(juego);
-		
-	}
 	
 	
 	

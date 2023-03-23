@@ -56,16 +56,11 @@ public class JuegoController {
 	//-- GUARDAR JUEGO A TRAVES DE LA URL "/save" REDIRIGIENDO A "/" --
 		@GetMapping("/save")
 		public String saveJuego(Juego juego) {
-			service.saveJuego(juego);
+			service.save(juego);
 			return ("redirect:/");
 		}
 		
-	//-- AÑADIR JUEGO A TRAVES DE LA URL "/new"--
-		@PostMapping("/new")
-		public String addJuego(Juego juego, Model m) {
-			m.addAttribute("juego",juego);
-			return "JuegoForm";
-		}
+
 
 
 }
