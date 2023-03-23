@@ -15,6 +15,15 @@ public interface JuegoService {
 		// RECUPERAR POR ID
 		public Optional<Juego>findById(int id);
 		
+		// MODIFICAR
+		public void saveJuego(Juego juego);
+				
+		// AÑADIR
+		public void addJuego(String name);
+				
+		// BORRAR
+		public void deleteJuego(int id);
+		
 		
 
 }

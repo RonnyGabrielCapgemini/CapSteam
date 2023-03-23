@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.spring.model.Juego;
 import com.example.spring.service.CsvReader;
 import com.example.spring.service.JuegoService;
 
@@ -19,12 +20,14 @@ public class JuegoController {
 	JuegoService service;
 	@Autowired 
 	CsvReader csvReader;
+	
 	//-- LISTAR LOS JUEGOS DESDE LA URL "/"--
 		@GetMapping("/")
 		public String listJuego(Model m) {
 			m.addAttribute("lista", service.findAll());
 			return "Lista";
 		}
+		
 		@GetMapping("/loadData")
 		public String loadData(Model m) {
 			try {
@@ -35,6 +38,7 @@ public class JuegoController {
 			}
 			return "Lista";
 		}
+		
 	//-- EDITAR EL JUEGO POR SU ID A TRAVES DE LA URL "/edit" --
 		@GetMapping("/edit")
 		public String editJuego(@RequestParam("id") int id, Model m) {
@@ -42,5 +46,26 @@ public class JuegoController {
 			return "JuegoForm";
 		}
 		
+	//-- ELIMINAR EL JUEGO POR SU ID A TRAVES DE LA URL "/delete" REDIRIGIENDO A "/" --
+		@GetMapping("/delete")
+		public String deleteJuego(@RequestParam("id") int id) {
+			service.deleteJuego(id);
+			return ("redirect:/");
+		}
+		
+	//-- GUARDAR JUEGO A TRAVES DE LA URL "/save" REDIRIGIENDO A "/" --
+		@GetMapping("/save")
+		public String saveJuego(Juego juego) {
+			service.saveJuego(juego);
+			return ("redirect:/");
+		}
+		
+	//-- AÑADIR JUEGO A TRAVES DE LA URL "/new"--
+		@PostMapping("/new")
+		public String addJuego(Juego juego, Model m) {
+			m.addAttribute("juego",juego);
+			return "JuegoForm";
+		}
+
 
 }
