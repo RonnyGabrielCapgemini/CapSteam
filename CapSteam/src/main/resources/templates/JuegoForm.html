@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CAP STEAM PROYECT </title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        FORMULARIO
+    </h1>
+    <h2>
+        Crear nuevo registro de juego
+    </h2>
+    <div>
+
+        <form method="post" th:object="${juego}" th:action="@{/save}">
+            <input id="id" th:field="*{juego.id}" type="hidden"/>
+            <table>
+                <tr>
+                    <td><label for="name">Nombre:</label></td>
+                    <td><input type="text" th:field="*{juego.name}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="platform">Plataforma:</label></td>
+                    <td><input type="text" th:field="*{juego.platform}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="year">Pa:</label></td>
+                    <td><input type="password" th:field="*{juego.year}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="genre">Genero:</label></td>
+                    <td><input type="password" th:field="*{juego.genre}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="publisher">Publicador:</label></td>
+                    <td><input type="password" th:field="*{juego.publisher}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="na_sales">Ventas en Norte America:</label></td>
+                    <td><input type="password" th:field="*{juego.na_sales}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="eu_sales">Ventas en Europa:</label></td>
+                    <td><input type="password" th:field="*{juego.eu_sales}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="jp_sales">Ventas en Japón:</label></td>
+                    <td><input type="password" th:field="*{juego.jp_sales}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="other_sales">Ventas en Japón:</label></td>
+                    <td><input type="password" th:field="*{juego.other_sales}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="global_sales">Ventas en Japón:</label></td>
+                    <td><input type="password" th:field="*{juego.global_sales}"/></td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit"
+                                                          value="Guardar Registro"></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
