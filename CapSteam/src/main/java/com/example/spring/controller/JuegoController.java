@@ -54,7 +54,7 @@ public class JuegoController {
 		}
 		
 	//-- GUARDAR JUEGO A TRAVES DE LA URL "/save" REDIRIGIENDO A "/" --
-		@GetMapping("/save")
+		@PostMapping("/save")
 		public String saveJuego(Juego juego) {
 			service.save(juego);
 			return ("redirect:/");
