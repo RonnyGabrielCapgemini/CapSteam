@@ -39,8 +39,8 @@ public class JuegoServiceImpl implements JuegoService {
 
 
 	@Override
-	public void addJuego(String name) {
-		juegoDao.addJuego(name);
+	public void addJuego(Juego juego) {
+		juegoDao.addJuego(juego);
 		
 	}
 	

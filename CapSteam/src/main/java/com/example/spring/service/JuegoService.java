@@ -6,7 +6,6 @@ import java.util.Optional;
 import com.example.spring.model.Juego;
 
 
-
 public interface JuegoService {
 	
 		// LISTAR LOS JUEGOS
@@ -19,7 +18,7 @@ public interface JuegoService {
 		public void saveJuego(Juego juego);
 				
 		// AÑADIR
-		public void addJuego(String name);
+		public void addJuego(Juego juego);
 				
 		// BORRAR
 		public void deleteJuego(int id);
