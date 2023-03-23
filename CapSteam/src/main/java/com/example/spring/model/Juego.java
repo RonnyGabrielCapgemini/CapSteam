@@ -14,7 +14,10 @@ import javax.persistence.Table;
 public class Juego {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="rank")
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="ranking")
 	private int rank;
 	@Column(name="name")
 	private String name;
@@ -123,11 +126,13 @@ public class Juego {
 	public void setGlobal_sales(Double global_sales) {
 		this.global_sales = global_sales;
 	}
+
 	@Override
 	public String toString() {
-		return "Juego [rank=" + rank + ", name=" + name + ", platform=" + platform + ", year=" + year + ", genre="
-				+ genre + ", publisher=" + publisher + ", na_sales=" + na_sales + ", eu_sales=" + eu_sales
+		return "Juego [id=" + id + ", rank=" + rank + ", name=" + name + ", platform=" + platform + ", year=" + year
+				+ ", genre=" + genre + ", publisher=" + publisher + ", na_sales=" + na_sales + ", eu_sales=" + eu_sales
 				+ ", jp_sales=" + jp_sales + ", other_sales=" + other_sales + ", global_sales=" + global_sales + "]";
 	}
+	
 	
 }
