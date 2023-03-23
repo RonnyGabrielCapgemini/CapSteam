@@ -59,7 +59,18 @@ public class JuegoController {
 			service.save(juego);
 			return ("redirect:/");
 		}
-		
+
+	//Nuevo Usuario
+
+	@GetMapping("/new")
+
+	public String newUser(Juego juego, Model m) {
+
+		m.addAttribute("juego",juego);
+
+		return "JuegoForm";
+
+	}
 
 
 

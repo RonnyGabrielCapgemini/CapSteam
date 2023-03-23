@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
+    <link rel="stylesheet" th:href="@{/listStyle.css}"/>
 
 </head>
 <body>
-<div class="container">
+<div class="contenedorLista">
     <h1>
         Proyecto CapSteam
     </h1>
@@ -14,8 +15,11 @@
         LISTA DE JUEGOS
     </h2>
 
+    <p>
+        <a href="/new" class="btnAddJuego">Añadir nuevo registro de Juego</a>
+    </p>
 
-    <table>
+    <table class="table">
         <tr>
             <th>Ranking</th>
             <th>Nombre</th>
@@ -30,8 +34,8 @@
             <th>Ventas globales</th>
 
         </tr>
-        <tr th:each="juego, status : ${lista}">
-            <td th:text="${status.index + 1}"/>
+        <tr th:each="juego : ${lista}">
+
             <td th:text="${juego.rank}"/>
             <td th:text="${juego.name}"/>
             <td th:text="${juego.platform}"/>
@@ -50,9 +54,6 @@
         </tr>
 
     </table>
-    <p>
-        <a href="/new" >Crear nuevo juego </a>
-    </p>
 </div>
 </body>
 </html>
