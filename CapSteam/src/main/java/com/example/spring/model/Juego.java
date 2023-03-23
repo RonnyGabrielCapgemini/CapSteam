@@ -16,7 +16,6 @@ public class Juego {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
-	
 	@Column(name="ranking")
 	private int rank;
 	@Column(name="name")
@@ -125,6 +124,14 @@ public class Juego {
 
 	public void setGlobal_sales(Double global_sales) {
 		this.global_sales = global_sales;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
