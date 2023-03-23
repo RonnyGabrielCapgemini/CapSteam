@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+</head>
+<body>
+<div class="container">
+    <h1>
+        Proyecto CapSteam
+    </h1>
+    <h2>
+        LISTA DE JUEGOS
+    </h2>
+
+
+    <table>
+        <tr>
+            <th>Ranking</th>
+            <th>Nombre</th>
+            <th>Plataforma</th>
+            <th>Año</th>
+            <th>Género</th>
+            <th>Publicador</th>
+            <th>Ventas Norte America</th>
+            <th>Ventas Europa</th>
+            <th>Ventas Japón</th>
+            <th>Ventas Otros paises</th>
+            <th>Ventas globales</th>
+
+        </tr>
+        <tr th:each="juego, status : ${lista}">
+            <td th:text="${status.index + 1}"/>
+            <td th:text="${juego.name}"/>
+            <td th:text="${juego.platform}"/>
+            <td th:text="${juego.year}"/>
+            <td th:text="${juego.genre}"/>
+            <td th:text="${juego.publisher}"/>
+            <td th:text="${juego.na_sales}"/>
+            <td th:text="${juego.eu_sales}"/>
+            <td th:text="${juego.jp_sales}"/>
+            <td th:text="${juego.other_sales}"/>
+            <td th:text="${juego.global_sales}"/>
+
+
+            <td><a th:href="@{/edit(id=${juego.id})}">Editar Campos</a> | <a
+                    th:href="@{/delete(id=${juego.id})}">Eliminar registro</a></td>
+        </tr>
+
+    </table>
+    <p>
+        <a href="/new" >Crear nuevo juego </a>
+    </p>
+</div>
+</body>
+</html>
