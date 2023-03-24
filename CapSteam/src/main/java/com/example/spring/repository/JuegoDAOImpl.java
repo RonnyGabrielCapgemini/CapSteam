@@ -1,5 +1,9 @@
 package com.example.spring.repository;
 
-public class JuegoDAOImpl {
+import java.util.List;
 
+import com.example.spring.model.Juego;
+
+public class JuegoDAOImpl {
+	
 }
