@@ -15,57 +15,57 @@
     <h2>
         Crear nuevo registro de juego
     </h2>
-    <div align="center">
+    <div>
 
         <form method="post" th:object="${juego}" th:action="@{/save}">
             <input id="id" th:field="*{id}" type="hidden"/>
-            <table>
+            <table  >
                 <tr>
                     <td><label for="name">Nombre:</label></td>
-                    <td><input type="text" th:field="*{name}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{name}"/></td>
                 </tr>
                 <tr>
                     <td><label for="platform">Plataforma:</label></td>
-                    <td><input type="text" th:field="*{platform}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{platform}"/></td>
                 </tr>
                 <tr>
 
                     <td><label for="year">Año:</label></td>
 
-                    <td><input type="text" th:field="*{year}"/></td>
+                    <td><input  class="formItem" type="text" th:field="*{year}"/></td>
                 </tr>
                 <tr>
                     <td><label for="genre">Genero:</label></td>
-                    <td><input type="text" th:field="*{genre}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{genre}"/></td>
                 </tr>
                 <tr>
                     <td><label for="publisher">Publicador:</label></td>
-                    <td><input type="text" th:field="*{publisher}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{publisher}"/></td>
                 </tr>
                 <tr>
                     <td><label for="na_sales">Ventas en Norte America:</label></td>
-                    <td><input type="text" th:field="*{na_sales}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{na_sales}"/></td>
                 </tr>
                 <tr>
                     <td><label for="eu_sales">Ventas en Europa:</label></td>
-                    <td><input type="text" th:field="*{eu_sales}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{eu_sales}"/></td>
                 </tr>
                 <tr>
                     <td><label for="jp_sales">Ventas en Japón:</label></td>
-                    <td><input type="text" th:field="*{jp_sales}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{jp_sales}"/></td>
                 </tr>
                 <tr>
                     <td><label for="other_sales">Ventas en Japón:</label></td>
-                    <td><input type="text" th:field="*{other_sales}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{other_sales}"/></td>
                 </tr>
                 <tr>
                     <td><label for="global_sales">Ventas en Japón:</label></td>
-                    <td><input type="text" th:field="*{global_sales}"/></td>
+                    <td><input class="formItem" type="text" th:field="*{global_sales}"/></td>
                 </tr>
 
 
                 <tr>
-                    <td colspan="2" align="center"><input type="submit"
+                    <td colspan="2" align="center"><input class="btnSave" type="submit"
                                                           value="Guardar Registro"></td>
                 </tr>
             </table>
