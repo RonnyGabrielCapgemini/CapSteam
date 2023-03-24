@@ -22,6 +22,8 @@ public interface JuegoDAO extends JpaRepository<Juego, Integer>  {
 	
 	// ELIMINAR
 	//public void deleteJuego(int id);
+	
+	public Juego findByName(String name);
 		
 	
 
