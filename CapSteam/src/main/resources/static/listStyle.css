@@ -5,8 +5,97 @@
     margin: 0px ;
     padding: 0px ;
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 body{
-    background-color:beige;
+    background-color:#c4e3f3;
 }
+
+.contenedorLista>h1{
+    text-align: center;
+}
+
+#flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+
+#titleNav{
+    font-size: 25px;
+}
+.flexTable{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 10px   ;
+}
+
+.flexTable>div{
+    padding: 15px;
+    margin: 10px ;
+    background-color: cadetblue;
+    text-align: center;
+
+}
+.flexTable>div:hover{
+    text-decoration: none;
+    background-color: moccasin;
+    color: black;
+
+}
+.flexTable>div:active{
+    transform: translateY(4px);
+}
+
+
+
+a{text-decoration: none;
+    color: white;}
+
+a:hover{text-decoration: none;
+    color: black;}
+
+
+.btnAct{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnAct>a{
+    padding: 10px;
+    margin: 5% ;
+    background-color: purple;
+}
+
+
+.formItem{
+    margin: 6px ;
+    padding: 5% ;
+
+}
+.btnSave{
+    padding: 10px;
+    margin: 5%  ;
+    background-color: limegreen;
+    color: white   ;
+
+}
+.btnSave:hover{
+    padding: 10px;
+    margin: 5%  ;
+    color: black ;
+
+}
+.btnSave:active{
+transform: translateY(4px);
+
+}
+
+
+
+

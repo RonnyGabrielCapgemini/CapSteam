@@ -2,23 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
-    <link rel="stylesheet" th:href="@{/bootstrap.css}" />
+    <title>Cap Steam Proyect</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
     <link rel="stylesheet" th:href="@{/listStyle.css}"/>
 
 </head>
 <body>
 <div class="contenedorLista">
     <h1>
-        Proyecto CapSteam
+        Proyecto 01
     </h1>
-    <h2>
-        LISTA DE JUEGOS
-    </h2>
 
-    <p>
-        <a href="/new" class="btn btn-primary">Añadir nuevo registro de Juego</a>
-    </p>
+
+   <nav id="flex">
+        <div id="titleNav"> Lista de Juegos CapSteam</div>
+        <div class="flexTable">
+            <div><a href="/new" >Añadir Juego</a></div>
+            <div><a href="/nintendo" >Juegos de Nintendo </a></div>
+            <div><a href="/siglo" >Juegos del siglo XX </a></div>
+            <div><a href="/genero" >Orden por género</a></div>
+            <div><a href="/new" >Juegos por año </a></div>
+            <div><a href="/editores" >Ordenador por editores</a></div>
+            <div><a href="/ventaEU">Media de ventas </a></div>
+            <div><a href="/par" >Juegos años pares</a></div>
+            <div><a href="/especial" >Query Especial 01</a></div>
+        </div>
+
+
+    </nav>
 
     <table class="table table-striped">
         <tr>
@@ -50,7 +61,7 @@
             <td th:text="${juego.global_sales}"/>
 
 
-            <td><a th:href="@{/edit(id=${juego.id})}">Editar Campos</a> | <a
+            <td class="btnAct"><a th:href="@{/edit(id=${juego.id})}">Editar Campos</a> | <a
                     th:href="@{/delete(id=${juego.id})}">Eliminar registro</a></td>
         </tr>
 
