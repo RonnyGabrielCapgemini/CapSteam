@@ -17,13 +17,10 @@ import com.example.spring.model.Juego;
 
 @Repository
 public interface JuegoDAO extends JpaRepository<Juego, Integer>  {
+
 	
-	// LISTAR
-	//public List<Juego> findAll();
-	
-	// RECUPERAR EL JUEGO POR SU ID
-	//public Optional<Juego>findById(int id);
-	
+	public Juego findByName(String name);
+
 	public List<Juego> findAllByOrderByPublisher();
 	public List<Juego> findAllByOrderByGenre();
 	 @Query("SELECT e from Juego e where e.year <:year ")     
@@ -35,6 +32,7 @@ public interface JuegoDAO extends JpaRepository<Juego, Integer>  {
 	public List<Juego> findAllByOrderByEusales();
 	@Query("SELECT e from Juego e where e.publisher='Nintendo' ")
 	public List<Juego> findAllByOrderByNintendo();
+
 		
 	
 

@@ -90,11 +90,11 @@ public class JuegoController {
 			return ("redirect:/");
 		}
 
-	//Nuevo Usuario
+	//-- Nuevo JUEGO--
 
 	@GetMapping("/new")
 
-	public String newUser(Juego juego, Model m) {
+	public String newJuego(Juego juego, Model m) {
 
 		m.addAttribute("juego",juego);
 
