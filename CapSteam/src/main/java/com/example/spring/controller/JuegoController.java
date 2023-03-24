@@ -27,6 +27,36 @@ public class JuegoController {
 			m.addAttribute("lista", service.findAll());
 			return "Lista";
 		}
+		@GetMapping("/editores")
+		public String listJuegoByPublisher(Model m) {
+			m.addAttribute("lista", service.findOrderByPublisher());
+			return "Lista";
+		}
+		@GetMapping("/genero")
+		public String listJuegoByGenre(Model m) {
+			m.addAttribute("lista", service.findAllByOrderByGenre());
+			return "Lista";
+		}
+		@GetMapping("/siglo")
+		public String listJuegoBySiglo(Model m) {
+			m.addAttribute("lista", service.findBySiglo(2000));
+			return "Lista";
+		}
+		@GetMapping("/par")
+		public String listJuegoByPar(Model m) {
+			m.addAttribute("lista", service.findByPar());
+			return "Lista";
+		}
+		@GetMapping("/ventaEU")
+		public String listJuegoByVentaEu(Model m) {
+			m.addAttribute("lista", service.findAllByOrderByEusales());
+			return "Lista";
+		}
+		@GetMapping("/nintendo")
+		public String listJuegoByNintendo(Model m) {
+			m.addAttribute("lista", service.findAllByOrderByNintendo());
+			return "Lista";
+		}
 		
 		@GetMapping("/loadData")
 		public String loadData(Model m) {
